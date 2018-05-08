@@ -5,12 +5,12 @@
    },
    "color_schemes": {
     "Ember": {
-      "primary": "444",
+      "primary": "444444",
       "secondary": "FDFDFD",
       "tertiary": "DD6A58",
       "quaternary": "E04E39",
       "header_background": "E04E39",
-      "header_primary": "FFF",
+      "header_primary": "FFFFFF",
       "highlight": "F8E7CF",
       "danger": "E04E39",
       "success": "61AE53",
