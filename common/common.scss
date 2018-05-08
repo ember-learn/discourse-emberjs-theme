@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+
+$yellow-bg: #FFFDF9;
+$brown: #f7f3ee;
+$light-brown: #E5DBD6;
+$light-gray: #d1d1d1;
+$light-red: #F9E7E4;
+$lighter-red: #FAF4F1;
+$ember: #E04E39;
+$dark-red: #9b2918;
+$light-yellow: #F8E7CF;
+
+html { 
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 16px;
+}
+
+.discourse-no-touch .topic-body .actions .fade-out {
+    opacity: 1;
+}
+
+.topic-body, 
+.topic-avatar, 
+.embedded-posts.bottom .row .topic-avatar, 
+.embedded-posts.bottom .row .topic-body, 
+.embedded-posts,
+.embedded-posts.top .row .topic-avatar, 
+.embedded-posts.top .row .topic-body,
+.small-action,
+.timeline-container .topic-timeline .timeline-scrollarea,
+.category-list tbody tr, 
+.latest-topic-list-item,
+.category-list tbody tr:first-of-type,
+.latest-topic-list .table-heading, .top-topic-list .table-heading,
+.user-main .about .secondary,
+.nav-stacked li,
+.content-list ul li,
+.post-links-container .post-links
+{
+    border-color: $light-brown;
+}
+
+#main-outlet {
+    padding-top: 72px;
+}
+
+div.ac-wrap, .select-kit.combo-box .select-kit-header,
+.search-container .search-advanced-sidebar .date-picker,
+input#search-min-post-count,
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"]{
+       box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 $secondary;
+        border: 1px solid $light-gray;
+        border-radius: 3px;
+}
+
+#reply-control {
+    background: $lighter-red;
+    input, .d-editor-textarea-wrapper, .select-kit.combo-box .select-kit-header {
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 $secondary;
+        border: 1px solid $light-gray;
+        border-radius: 3px;
+    }
+}
+
+.d-editor-preview {
+    padding: 10px 10px 0 10px;
+    background: rgba($secondary, .75);
+}
+
+.d-header #site-logo {
+    filter: brightness(0) invert(1);
+    max-height: 35px;
+    margin-top: 2px;
+}
+
+
+.nav-pulls>li {
+ min-height: 30px;   
+}
+
+.nav-pills>li>a {
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14.4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    min-height: 29px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    &:hover, &:focus {
+        background: $ember;
+        box-shadow: 0px 2px 4px -1px #666;
+        color: $secondary;
+        transform: translateY(-1px);
+        transition: 0.3s translateY;
+        i {
+            color: $secondary;
+        }
+        
+    }
+    
+}
+
+
+.badge-wrapper.box span.badge-category-bg, .badge-wrapper.box span.badge-category-parent-bg {
+    border-radius: 5px;
+}
+
+.badge-notification.new-topic {
+    vertical-align: baseline;
+}
+
+.d-header-icons .unread-notifications {
+    background: $light-yellow;
+    color: $primary;
+}
+
+.badge-notification.new-posts, .badge-notification.unread-posts {
+    background: #e48879;
+}
+
+.select-kit.combo-box.category-drop .category-drop-header, .select-kit.combo-box.group-dropdown .combo-box-header {
+    padding: 5px 12px;
+    border-radius: 5px;
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 14.4px;
+}
+
+.select-kit.combo-box.category-drop.box.has-selection .category-drop-header {
+    padding: 3px 12px;
+}
+
+.select-kit-header.combo-box-header.category-drop-header.is-none,
+.select-kit.combo-box.group-dropdown .combo-box-header{
+    background: transparent !important;
+    box-shadow: none;
+    border: 1px solid $quaternary;
+    .fa {
+        background: transparent !important;
+    }
+}
+
+.select-kit-header {
+    .d-icon {
+        color: $quaternary;
+    }
+}
+
+#reply-control {
+    .title-and-category .select-kit-header {
+     .d-icon {
+        color: lighten($primary, 30%);
+    }
+}
+}
+
+.badge-wrapper .badge-category .category-name {
+    font-weight: bold;
+    
+}
+
+nav.post-controls a, nav.post-controls button, 
+nav.post-controls button.create,
+nav.post-controls .like-button .like-count {
+    color: lighten($primary, 40%);
+}
+
+.btn, button, .list-controls .btn, .topic-post article.boxed .select-posts button  {
+    background: $secondary;
+    color: $quaternary;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14.4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 1px solid $quaternary;
+    &:hover:not(.select-kit-header), 
+    &:focus:not(.select-kit-header) {
+        background: $ember;
+        box-shadow: 0px 2px 4px -1px #666;
+        color: $secondary;
+        transform: translateY(-1px);
+        transition: 0.3s translateY;
+        
+    }
+    &.bulk-select:hover, &.toggler:hover {
+        background: transparent;
+        box-shadow: none;
+        transform: none;
+    }
+    &.collapse-up {
+        color: lighten($quaternary, 25%);
+        border-color: $light-brown;
+    &:hover {
+       transform: translate(-50%, -164%);
+        }
+
+    }
+    &.collapse-down {
+        color: lighten($quaternary, 25%);
+        border-color: $light-brown;
+    &:hover {
+       transform: translate(-50%, 55%);
+        }
+
+    }
+}
+
+.select-kit.dropdown-select-box .dropdown-select-box-header {
+    border: 1px solid $quaternary;
+}
+
+.select-kit.dropdown-select-box .dropdown-select-box-header:hover .d-icon {
+    color: $quaternary;
+}
+
+.d-editor-button-bar {
+    button,.select-kit.dropdown-select-box .dropdown-select-box-header   {
+     border: none;
+     i {color: lighten($primary, 30%);}
+     &:hover {
+         background: $quaternary;
+         i { color: $secondary; }
+     }
+ }
+}
+
+.btn-primary {
+    background: $quaternary;
+    color: $secondary;
+}
+
+
+.btn[href] {
+    color: $quaternary;
+}
+
+#list-area .top-lists h2 {
+    overflow: hidden;
+}
+
+
+nav.post-controls .show-replies {
+    display: inline-flex;
+    align-items: center;
+}
+
+nav.post-controls .show-replies:hover,
+nav.post-controls button:hover,
+nav.post-controls .like-button .widget-button:hover,
+nav.post-controls .like-button:hover .like-count.d-hover,
+.topic-map .buttons .btn:hover,
+.select-kit.dropdown-select-box.composer-actions .select-kit-header:hover, 
+.select-kit.dropdown-select-box.composer-actions .select-kit-header:focus,
+.admin-controls .nav.nav-pills li.active a,
+.admin-controls .nav.nav-pills li.active a:hover {
+    background: $quaternary;
+    color: $secondary;
+    i {
+        color: $secondary !important;
+    }
+}
+
+nav.post-controls .like-button:hover {
+    background: transparent;
+}
+
+.topic-list>tbody>tr,.topic-list>tbody {
+    border-color: $light-brown;
+    border-width: 1px;
+}
+
+.cooked, .d-editor-preview { 
+    p {
+        line-height: 1.5;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $dark-red;
+    }
+    pre code, p>code, li>code, pre>code {
+        background: $light-yellow;
+    }
+}
+
+
+.badge-groups {
+            color: $quaternary;
+
+}
+
+.timeline-container .topic-timeline .timeline-handle {
+    background: $quaternary;
+}
+
+
+aside.quote .title, 
+blockquote, 
+a.mention,
+a.mention-group, 
+aside.onebox, 
+aside.onebox header a[href],
+.topic-map section,
+.topic-map .buttons .btn {
+    background: $brown;
+    border-color: $light-red;
+    color: $primary;
+ }
+ 
+ .top-sub-section li {
+         border-color: $light-red;
+ }
+ 
+ .user-main .about .controls {
+     width: auto;
+ }
+ 
+ .topic-map .buttons .btn {
+     border-radius: 0 5px 5px 0;
+     border: none;
+     i {
+        color: lighten($quaternary, 15%);
+     }
+ }
+ 
+ .topic-map {
+     border-radius: 5px;
+     border: 1px solid $light-red;
+     section:first-of-type {
+         border-top: none;
+     }
+     
+    span.domain {
+     color: $primary;   
+    }
+ }
+
+
+.quote-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quote-controls, 
+.quote-controls .d-icon, 
+.embedded-posts .arrow {
+    color: lighten($quaternary, 25%);
+}
+
+.topic-map h4, .topic-map h3,
+.topic-map .map .number, .topic-map .map i,
+.timeline-container .topic-timeline .timeline-ago,
+.category-list .topics .badge-notification, 
+.category-list .category .badge-notification {
+        color: lighten($quaternary, 15%);
+}
+
+.badge-notification.clicks {
+    background: lighten($quaternary, 15%);
+    color: $secondary;
+}
+
+.small-action .small-action-desc.timegap{
+    color: #ea897b;
+}
+
+.names span a, 
+.topic-body .reply-to-tab, 
+.topic-meta-data .post-info a, 
+.timeline-container .topic-timeline .start-date, 
+.timeline-container .topic-timeline .now-date,
+.topic-list th,
+#reply-control .reply-to,
+#reply-control .reply-to i,
+.latest-topic-list .table-heading, 
+.top-topic-list .table-heading,
+.group-nav li a, .group-nav li i,
+ .user-navigation .nav-stacked a, .user-nav li a {
+    color: $primary;
+}
+
+.category-list td, .category-list th {
+    color: $primary !important;
+}
+
+#topic-progress .nums {
+    top: 5px;
+}
+
+#reply-control .reply-to i {
+    border: none;
+}
+
+.select-kit.dropdown-select-box.composer-actions .select-kit-header {
+    border: 1px solid $light-brown;
+    border-radius: 5px;
+}
+
+
+.topic-body .reply-to-tab {
+    margin: 0 25px 0 0;
+}
+
+.user-navigation .nav-stacked a {
+     border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14.4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    min-height: 29px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
+    margin: 5px 0;
+    &.active {
+           color: #FDFDFD;
+    background-color: $ember;
+    
+    }
+}
+
+.topic-list-item.visited a.title:not(.badge-notification), 
+.latest-topic-list-item.visited a.title:not(.badge-notification), 
+.category-topic-link.visited a.title:not(.badge-notification),
+.topic-list td, 
+.badge-posts[href],
+.stats-section .label,
+.list-cell, .table-heading, .category-list td, .category-list th,
+#topic-footer-buttons p,
+div.menu-links-header .fa, div.menu-links-header a,
+.user-menu .notifications .fa,
+.username.new-user a,
+.upload-selector .radios .inputs .description, 
+.upload-selector .radios .inputs .hint {
+    color: lighten($primary, 30%);
+}
+
+.badge-card,
+#user-card.show-badges .badge-section .user-badge, 
+#user-card.show-badges .badge-section .more-user-badges,
+.user-badge, #user-card.show-badges .more-user-badges,
+.content-list ul li a:hover {
+    background: $brown;
+    border-color: $light-brown;
+}
+
+.d-header-icons .icon:hover, 
+.drop-down-mode .d-header-icons .active .icon {
+    background: $secondary;
+    color: $quaternary;
+}
+
+
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header h2.selected-name .top-date-string,
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row .top-date-string,
+.post-links-container ul li a[href] {
+    color: $quaternary;
+}
+
+.admin-controls, .dashboard-stats table th, .nav-stacked,
+.search-container .search-advanced-sidebar .search-advanced-filters,
+.topic-list .sortable:hover,
+.group-details-container {
+    background: $lighter-red;
+}
+
+.search-container .search-advanced-sidebar .search-advanced-title,
+{
+    background: darken($lighter-red, 5%);
+}
+
+.select-kit.combo-box.category-drop.box.has-selection .category-drop-header,
+.select-kit-header.combo-box-header.category-drop-header.is-none{
+    box-shadow: none;
+}
+
+.emoji-picker button.emoji:hover {
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $quaternary;
+}
+
+#topic-progress-wrapper .topic-admin-menu-button-container {
+    right: 45px;
+    height: 34px;
+    .widget-button {
+        border-color: $quaternary;
+    }
+}
+
+.user-menu .notifications .show-all .btn {
+    margin-top: 5px;
+    i {color: $quaternary;}
+    background: $secondary;
+    &:hover {
+        background: $quaternary;
+        i {color: $secondary;}
+    }
+}
+
+.topic-bulk-actions-modal .bulk-buttons .btn {
+    max-width: unset;
+}
+
+.group-activity-nav, .group-navigation  {
+     background: $secondary;
+}
+
+#private-message-users {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+div.ac-wrap div.item a.remove, .remove-link {
+    padding: 0px 4px 1px;
+}
+
+.btn-social {
+    color: $secondary !important;
+    border-color: transparent;
+}
+
+button#login-link, button#new-account-link {
+    color: $quaternary;
+}
+
+
+.d-header {
+    box-shadow: none;
+    height: 50px;
+    font-size: 14px;
+    .contents {
+        margin: 2px 0;
+    }
+    .btn-primary {
+        background: $secondary;
+        color: $quaternary;
+        &:hover {
+         background: $secondary;
+         color: $quaternary;   
+        }
+    }
+}

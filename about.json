@@ -1,0 +1,20 @@
+{
+  "name": "discourse-ember-theme",
+  "about_url": "https://discuss.emberjs.com",
+   "assets": {
+   },
+   "color_schemes": {
+    "Ember": {
+      "primary": "444",
+      "secondary": "FDFDFD",
+      "tertiary": "DD6A58",
+      "quaternary": "E04E39",
+      "header_background": "E04E39",
+      "header_primary": "FFF",
+      "highlight": "F8E7CF",
+      "danger": "E04E39",
+      "success": "61AE53",
+      "love": "E04E39"
+    }
+ }
+}
