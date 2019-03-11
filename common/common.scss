@@ -83,7 +83,6 @@ input[type="color"]{
 .d-header #site-logo {
     filter: brightness(0) invert(1);
     max-height: 35px;
-    margin-top: 2px;
 }
 
 
@@ -190,6 +189,9 @@ nav.post-controls .like-button .like-count {
     font-weight: bold;
     letter-spacing: 1px;
     border: 1px solid $quaternary;
+    .d-icon {
+        color: $quaternary;
+    }
     &:hover:not(.select-kit-header), 
     &:focus:not(.select-kit-header) {
         background: $ember;
@@ -197,7 +199,9 @@ nav.post-controls .like-button .like-count {
         color: $secondary;
         transform: translateY(-1px);
         transition: 0.3s translateY;
-        
+        .d-icon {
+            color: $secondary;
+        }
     }
     &.bulk-select:hover, &.toggler:hover {
         background: transparent;
@@ -233,10 +237,10 @@ nav.post-controls .like-button .like-count {
 .d-editor-button-bar {
     button,.select-kit.dropdown-select-box .dropdown-select-box-header   {
      border: none;
-     i {color: lighten($primary, 30%);}
+     .d-icon {color: lighten($primary, 30%);}
      &:hover {
          background: $quaternary;
-         i { color: $secondary; }
+         .d-icon { color: $secondary; }
      }
  }
 }
@@ -244,11 +248,17 @@ nav.post-controls .like-button .like-count {
 .btn-primary {
     background: $quaternary;
     color: $secondary;
+    .d-icon {
+        color: $secondary;
+    }
 }
 
 
 .btn[href] {
-    color: $quaternary;
+    color: $secondary;
+    .d-icon {
+        color: $secondary;
+    }
 }
 
 #list-area .top-lists h2 {
@@ -272,7 +282,7 @@ nav.post-controls .like-button:hover .like-count.d-hover,
 .admin-controls .nav.nav-pills li.active a:hover {
     background: $quaternary;
     color: $secondary;
-    i {
+    .d-icon {
         color: $secondary !important;
     }
 }
@@ -333,7 +343,7 @@ aside.onebox header a[href],
  .topic-map .buttons .btn {
      border-radius: 0 5px 5px 0;
      border: none;
-     i {
+     .d-icon {
         color: lighten($quaternary, 15%);
      }
  }
@@ -402,7 +412,7 @@ aside.onebox header a[href],
     top: 5px;
 }
 
-#reply-control .reply-to i {
+#reply-control .reply-to .d-icon {
     border: none;
 }
 
@@ -459,8 +469,8 @@ div.menu-links-header .fa, div.menu-links-header a,
     border-color: $light-brown;
 }
 
-.d-header-icons .icon:hover, 
-.drop-down-mode .d-header-icons .active .icon {
+.d-header-icons .icon:hover .d-icon, 
+.drop-down-mode .d-header-icons .active .icon  .d-icon {
     background: $secondary;
     color: $quaternary;
 }
@@ -506,11 +516,11 @@ div.menu-links-header .fa, div.menu-links-header a,
 
 .user-menu .notifications .show-all .btn {
     margin-top: 5px;
-    i {color: $quaternary;}
+    .d-icon {color: $quaternary;}
     background: $secondary;
     &:hover {
         background: $quaternary;
-        i {color: $secondary;}
+        .d-icon {color: $secondary;}
     }
 }
 
@@ -545,15 +555,24 @@ button#login-link, button#new-account-link {
     box-shadow: none;
     height: 50px;
     font-size: 14px;
+    .d-header-icons .d-icon {
+        color: $secondary;
+    }
     .contents {
-        margin: 2px 0;
+        margin: 0;
     }
     .btn-primary {
         background: $secondary;
         color: $quaternary;
+        .d-icon {
+            color: $quaternary;   
+        }
         &:hover {
          background: $secondary;
          color: $quaternary;   
+         .d-icon {
+            color: $quaternary;   
+         }
         }
     }
 }
