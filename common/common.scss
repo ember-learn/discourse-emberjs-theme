@@ -620,6 +620,10 @@ div.ac-wrap div.item a.remove,
   border-color: transparent;
 }
 
+.btn-social.google_oauth2 {
+  color: $primary !important;
+}
+
 button#login-link,
 button#new-account-link {
   color: $quaternary;
