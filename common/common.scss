@@ -663,3 +663,7 @@ button#new-account-link {
     }
   }
 }
+
+.modal-footer .btn[href] {
+	color: $ember;
+}
