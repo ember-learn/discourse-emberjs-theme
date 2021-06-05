@@ -195,8 +195,8 @@ button,
       color: $quaternary;
     }
   }
-  &:hover:not(.select-kit-header),
-  &:focus:not(.select-kit-header) {
+  &:hover:not(.select-kit-header):not(.btn-social),
+  &:focus:not(.select-kit-header):not(.btn-social) {
     background: $ember;
     box-shadow: 0px 2px 4px -1px #666;
     color: $secondary;
@@ -612,12 +612,10 @@ div.ac-wrap div.item a.remove,
 }
 
 .btn-social {
-  color: $secondary !important;
   border-color: transparent;
-}
-
-.btn-social.google_oauth2 {
-  color: $primary !important;
+  &:hover {
+    .d-icon
+  }
 }
 
 button#login-link,
@@ -661,5 +659,5 @@ button#new-account-link {
 }
 
 .modal-footer .btn[href] {
-	color: $ember;
+  color: $ember;
 }
