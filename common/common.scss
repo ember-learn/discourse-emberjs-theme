@@ -321,6 +321,13 @@ nav.post-controls .actions .double-button:hover button.has-like .d-icon {
   color: var(--secondary);
 }
 
+nav.post-controls .actions .double-button button.like.d-hover {
+  background: var(--quaternary);
+  .d-icon {
+    color: var(--secondary);
+  }
+}
+
 nav.post-controls
   .actions
   .double-button
