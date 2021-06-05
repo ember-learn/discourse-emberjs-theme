@@ -229,6 +229,7 @@ button,
 }
 
 .btn-flat {
+  background: transparent;
   border: none;
   .discourse-no-touch & {
     &:hover {
@@ -270,7 +271,11 @@ button,
   }
 }
 
-.btn[href] {
+.btn[href].btn-default {
+  color: var(--quaternary);
+}
+
+.btn[href]:not(.btn-default):not(.btn-small) {
   color: $secondary;
   .d-icon {
     color: $secondary;
@@ -303,6 +308,38 @@ nav.post-controls button.btn-flat:hover,
 nav.post-controls .like-button:hover {
   background: transparent;
 }
+
+nav.post-controls .actions .double-button:hover {
+  box-shadow: 0px 2px 4px -1px #666;
+
+  button {
+    background: $quaternary;
+  }
+}
+
+nav.post-controls .actions .double-button:hover button.has-like .d-icon {
+  color: var(--secondary);
+}
+
+nav.post-controls
+  .actions
+  .double-button
+  button.button-count
+  + .toggle-like.d-hover {
+  box-shadow: none;
+  background: transparent;
+}
+
+nav.post-controls .actions .double-button:hover button {
+  color: var(--secondary);
+}
+
+nav.post-controls .actions .double-button button.button-count.d-hover {
+  color: var(--secondary);
+  box-shadow: none;
+  background: transparent;
+}
+
 nav.post-controls .double-button {
   &:hover {
     background: $ember;
@@ -461,6 +498,10 @@ aside.onebox header a[href],
   color: $primary !important;
 }
 
+#topic-progress {
+  height: unset;
+}
+
 #topic-progress .nums {
   top: 5px;
 }
@@ -515,6 +556,16 @@ div.menu-links-header a,
   color: lighten($primary, 30%);
 }
 
+div.menu-links-header .menu-links-row button {
+  border-radius: 3px;
+  box-shadow: none !important;
+  margin-top: 0 !important;
+
+  &.active {
+    border-top: 1px solid var(--primary-low);
+  }
+}
+
 .badge-card,
 #user-card.show-badges .badge-section .user-badge,
 #user-card.show-badges .badge-section .more-user-badges,
@@ -543,6 +594,20 @@ div.menu-links-header a,
   .top-date-string,
 .post-links-container ul li a[href] {
   color: $quaternary;
+}
+
+.select-kit.dropdown-select-box .dropdown-select-box-header:hover {
+  background: var(--quaternary);
+  color: var(--secondary);
+  .d-icon {
+    color: currentColor;
+  }
+}
+
+button.popup-menu-btn-danger:hover:not(.select-kit-header):not(.btn-social) {
+  .d-button-label {
+    color: var(--secondary);
+  }
 }
 
 .admin-controls,
@@ -618,6 +683,8 @@ div.ac-wrap div.item a.remove,
 button#login-link,
 button#new-account-link {
   color: $quaternary;
+  border: none;
+  box-shadow: none;
 }
 
 .header-dropdown-toggle .flagged-posts,
@@ -657,4 +724,22 @@ button#new-account-link {
 
 .modal-footer .btn[href] {
   color: $ember;
+}
+
+li.logout button,
+.do-not-disturb-inner-container {
+  text-transform: none;
+  color: var(--primary);
+  font-weight: normal;
+  letter-spacing: normal;
+  border-radius: 0;
+  &:hover {
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: translateY(0) !important;
+    color: currentColor !important;
+    .d-icon {
+      color: currentColor !important;
+    }
+  }
 }
