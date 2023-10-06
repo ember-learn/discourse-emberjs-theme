@@ -827,3 +827,15 @@ li.logout button,
     height: 100%;
   }
 }
+
+.alert-info .btn-link.btn-text {
+  border: none !important;
+  background: transparent !important;
+  text-transform: none !important;
+  text-decoration: underline !important;
+  &:hover,
+  &:focus {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
