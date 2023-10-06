@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600");
-@import "colors";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+@import 'colors';
 
 html {
   font-family: Source Sans Pro, sans-serif;
@@ -35,20 +35,20 @@ div.ac-wrap,
 .select-kit.combo-box .select-kit-header,
 .search-container .search-advanced-sidebar .date-picker,
 input#search-min-post-count,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+input[type='text'],
+input[type='password'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input[type='color'] {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 $secondary;
   border: 1px solid $light-gray;
   border-radius: 3px;
@@ -95,8 +95,6 @@ input[type="color"] {
     background: $ember;
     box-shadow: 0px 2px 4px -1px #666;
     color: $secondary;
-    transform: translateY(-1px);
-    transition: 0.3s translateY;
     i {
       color: $secondary;
     }
@@ -178,8 +176,12 @@ nav.post-controls .like-button .like-count {
   }
 }
 
-.btn,
-button,
+.btn:not(.btn-flat):not([class*='popup-menu-btn']):not(.btn-transparent):not(
+    .bookmark-options-button
+  ),
+button:not(.btn-flat):not(.posts-map):not([class*='popup-menu-btn']):not(
+    .btn-transparent
+  ):not(.bookmark-options-button),
 .list-controls .btn,
 .topic-post article.boxed .select-posts button {
   background: $secondary;
@@ -200,8 +202,7 @@ button,
     background: $ember;
     box-shadow: 0px 2px 4px -1px #666;
     color: $secondary;
-    transform: translateY(-1px);
-    transition: 0.3s translateY;
+
     .d-icon {
       color: $secondary;
     }
@@ -235,6 +236,15 @@ button,
     &:hover {
       box-shadow: none;
       transform: none;
+    }
+  }
+}
+
+.popup-menu-btn-danger {
+  &:hover,
+  &:focus {
+    .d-button-label {
+      color: var(--danger) !important;
     }
   }
 }
@@ -364,7 +374,7 @@ nav.post-controls .double-button {
           background: $ember;
         }
       }
-      &.has-like[disabled="true"] {
+      &.has-like[disabled='true'] {
         .d-icon {
           color: $secondary !important;
         }
@@ -588,6 +598,30 @@ div.menu-links-header .menu-links-row button {
   color: $quaternary;
 }
 
+.d-header-icons {
+  li.active {
+    button {
+      border-radius: 5px 5px 0 0;
+    }
+  }
+}
+
+.drop-down-mode .d-header-icons .active .icon:hover {
+  border-bottom: 1px solid var(--secondary);
+}
+
+.panel-body .panel-body-bottom {
+  > * {
+    border-color: var(--primary-low);
+    .d-icon {
+      color: var(--primary-medium);
+    }
+    &:hover {
+      border-color: var(--quaternary);
+    }
+  }
+}
+
 .extra-info-wrapper .topic-statuses .d-icon {
   color: $secondary;
 }
@@ -601,6 +635,16 @@ div.menu-links-header .menu-links-row button {
   .top-date-string,
 .post-links-container ul li a[href] {
   color: $quaternary;
+}
+
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header {
+  display: flex;
+  align-items: center;
+  &:hover {
+    .d-icon {
+      color: var(--quaternary);
+    }
+  }
 }
 
 .select-kit.dropdown-select-box .dropdown-select-box-header:hover {
@@ -748,5 +792,30 @@ li.logout button,
     .d-icon {
       color: currentColor !important;
     }
+  }
+}
+
+.user-menu.revamped .tabs-list {
+  .btn {
+    .d-icon {
+      color: var(--primary-medium);
+    }
+    &.active,
+    &:focus {
+      background: var(--tertiary);
+      .d-icon {
+        color: var(--secondary);
+      }
+    }
+  }
+}
+
+.menu-panel {
+  font-size: 1rem;
+}
+
+.fk-d-button-tooltip {
+  button {
+    height: 100%;
   }
 }
