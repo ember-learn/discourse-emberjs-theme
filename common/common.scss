@@ -260,7 +260,7 @@ button:not(.btn-flat):not(.posts-map):not([class*='popup-menu-btn']):not(
 .d-editor-button-bar {
   button.btn,
   .select-kit.dropdown-select-box .dropdown-select-box-header {
-    border: none;
+    border: none !important;
     .d-icon {
       color: $primary-medium;
     }
@@ -270,6 +270,14 @@ button:not(.btn-flat):not(.posts-map):not([class*='popup-menu-btn']):not(
         color: $secondary;
       }
     }
+  }
+}
+
+.d-editor-button-bar
+  .select-kit.dropdown-select-box
+  .dropdown-select-box-header:hover {
+  .d-icon {
+    color: var(--secondary) !important;
   }
 }
 
