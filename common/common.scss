@@ -835,7 +835,7 @@ li.logout button,
   text-decoration: underline !important;
   &:hover,
   &:focus {
-    color: var(--tertiary);
+    color: var(--tertiary) !important;
     background: transparent !important;
     box-shadow: none !important;
   }
