@@ -1,0 +1,17 @@
+{{! manually lifted from https://github.com/ember-learn/ember-styleguide/ }}
+
+<div class="footer-statement">
+  <p class="footer-copyright container py-1">
+    &copy; Copyright
+    {{this.currentYear}}
+    -
+    <a href="https://www.tilde.io/" class="footer-copyright">Tilde Inc.</a>
+    <br />
+    {{@tagline}}
+    {{#if @contributeLink}}
+      <br />
+      <a href={{@contributeLink}}>Contribute to this page
+        {{d-icon "ember-external"}}</a>
+    {{/if}}
+  </p>
+</div>

@@ -1,0 +1,32 @@
+.open .grippie {
+  background: var(--primary);
+  &:before {
+    border-color: var(--primary-500);
+  }
+}
+
+#reply-control .reply-area {
+  background: var(--primary-very-low);
+}
+
+.composer-popup {
+  border-radius: var(--d-border-radius-large);
+}
+
+.d-editor-button-bar {
+  .btn {
+    border-radius: 0;
+  }
+}
+
+.select-kit.combo-box.category-chooser .select-kit-row {
+  .category-desc {
+    margin-top: 0.25em;
+  }
+
+  &:hover {
+    .category-desc {
+      color: var(--primary-700);
+    }
+  }
+}

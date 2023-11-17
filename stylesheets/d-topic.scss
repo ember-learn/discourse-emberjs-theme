@@ -1,0 +1,141 @@
+#topic-title h1 {
+  font-size: var(--font-up-5);
+}
+
+.title-wrapper {
+  .topic-category {
+    margin: 0.5em 0;
+  }
+}
+
+.cooked {
+  line-height: 1.6875;
+  color: var(--primary-900);
+
+  a:not(.mention):not(.mention-group) {
+    background: no-repeat left bottom
+      linear-gradient(var(--color-brand-40), var(--color-brand-40));
+    background-size: 100% 0.1875rem;
+  }
+}
+
+.poll {
+  background: var(--secondary);
+}
+
+.hljs,
+pre code {
+  background: var(--secondary);
+}
+
+.codeblock-button-wrapper {
+  gap: 0.25em;
+  padding: 0.25em;
+}
+
+a.mention,
+a.mention-group {
+  background: var(--primary-300);
+}
+
+.timeline-container .topic-timeline {
+  .timeline-handle {
+    background: var(--tertiary);
+  }
+  .timeline-scrollarea {
+    border-color: var(--tertiary-medium);
+  }
+}
+
+.post-notice.old {
+  display: none;
+}
+
+.topic-avatar,
+.topic-body {
+  padding-top: 1.25rem;
+}
+
+.topic-body {
+  @media (prefers-reduced-motion: no-preference) {
+    &.highlighted {
+      animation: background-fade-highlight-visited 2.5s ease-out;
+    }
+  }
+}
+
+.cooked table thead th,
+.d-editor-preview table thead th {
+  color: var(--primary-high);
+}
+
+aside.quote {
+  .title,
+  blockquote {
+    background: var(--primary-200);
+    border-left-color: var(--primary-500);
+  }
+}
+
+.map:first-of-type .buttons .btn {
+  border-radius: var(--d-border-radius-large) var(--d-border-radius-large) 0
+    var(--d-border-radius-large);
+}
+
+.topic-map {
+  background: var(--primary-100);
+  border-radius: var(--d-border-radius-large);
+  border: 1px solid var(--primary-200);
+  .toggle-summary {
+    padding: 0 10px 1em 10px;
+    .summarization-buttons .top-replies {
+      margin-left: 0;
+    }
+  }
+
+  section.map {
+    border-top: none;
+  }
+
+  .buttons .btn {
+    background: var(--primary-low);
+  }
+}
+
+.topic-map-expanded section:first-child {
+  border-top: none;
+}
+
+nav.post-controls .actions {
+  > button,
+  .double-button,
+  .extra-buttons button {
+    border-radius: var(--d-button-border-radius);
+  }
+
+  .double-button {
+    overflow: hidden;
+  }
+}
+
+.extra-info-wrapper {
+  padding: 0 1.5em;
+}
+
+// suggested topics
+
+.more-topics__container
+  .more-topics__list
+  .topic-list-body
+  .topic-list-item:first-child
+  td {
+  padding-top: 1em;
+}
+
+.more-topics__container .more-topics__list .topic-list-header::after {
+  display: none;
+}
+
+.more-topics__container {
+  margin-bottom: 5em;
+}
