@@ -1,3 +1,4 @@
-{{#unless @outletArgs.topic}}
+{{! outletArgs.attrs for legacy support }}
+{{#unless (or @outletArgs.topic @outletArgs.attrs.topic)}}
   <EsHeader />
 {{/unless}}
