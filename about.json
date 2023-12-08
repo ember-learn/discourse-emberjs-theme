@@ -4,9 +4,9 @@
     "intervar": "/assets/inter-var.woff2",
     "icons-sprite": "/assets/spritesheet.svg"
   },
-  "name": "Ember theme, 2023",
+  "name": "Ember.js theme",
   "color_schemes": {
-    "Light": {
+    "Ember-Light": {
       "primary": "1c1e24",
       "secondary": "ffffff",
       "tertiary": "e04e39",
@@ -20,7 +20,7 @@
       "hover": "dce0e6",
       "selected": "dce0e6"
     },
-    "Dark": {
+    "Ember-Dark": {
       "primary": "f3f4f6",
       "secondary": "1c1e24",
       "tertiary": "e04e39",
