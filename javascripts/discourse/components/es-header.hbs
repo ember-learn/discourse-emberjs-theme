@@ -1,0 +1,30 @@
+{{! manually lifted from https://github.com/ember-learn/ember-styleguide/ }}
+{{! template-lint-disable no-redundant-landmark-role }}
+<header class="es-header" role="banner" ...attributes>
+  <nav
+    class="es-navbar {{if this.expanded 'navbar-expanded'}}"
+    aria-label="Primary site navigation"
+  >
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-expanded={{if this.expanded "true" "false"}}
+      {{on "click" this.onTogglerClick}}
+    >
+      {{if this.expanded "Hide" "Show"}}
+      Site Navigation
+    </button>
+
+    <ul class="navbar-list">
+      {{#each this.navLinks as |link|}}
+        <EsHeaderNavbarLink @link={{link}} />
+      {{/each}}
+    </ul>
+
+    {{#if (has-block)}}
+      <div class="navbar-end">
+        {{yield}}
+      </div>
+    {{/if}}
+  </nav>
+</header>

@@ -1,20 +1,39 @@
 {
-  "name": "discourse-ember-theme",
-  "about_url": "https://discuss.emberjs.com",
-   "assets": {
-   },
-   "color_schemes": {
-    "Ember": {
-      "primary": "444444",
-      "secondary": "FDFDFD",
-      "tertiary": "DD6A58",
-      "quaternary": "E04E39",
-      "header_background": "E04E39",
-      "header_primary": "FFFFFF",
-      "highlight": "F8E7CF",
-      "danger": "E04E39",
-      "success": "61AE53",
-      "love": "E04E39"
+  "license_url": "/LICENSE",
+  "assets": {
+    "intervar": "/assets/inter-var.woff2",
+    "icons-sprite": "/assets/spritesheet.svg"
+  },
+  "name": "Ember.js theme",
+  "color_schemes": {
+    "Ember-Light": {
+      "primary": "1c1e24",
+      "secondary": "ffffff",
+      "tertiary": "e04e39",
+      "quaternary": "e04e39",
+      "header_background": "1c1e24",
+      "header_primary": "ffffff",
+      "highlight": "e04e39",
+      "danger": "cf2d20",
+      "success": "51E866",
+      "love": "e04e39",
+      "hover": "dce0e6",
+      "selected": "dce0e6"
+    },
+    "Ember-Dark": {
+      "primary": "f3f4f6",
+      "secondary": "1c1e24",
+      "tertiary": "e04e39",
+      "quaternary": "e04e39",
+      "header_background": "1c1e24",
+      "header_primary": "f4f6f8",
+      "highlight": "222c36",
+      "danger": "cf2d20",
+      "success": "51E866",
+      "love": "e04e39",
+      "hover": "2e333d",
+      "selected": "2e333d"
     }
- }
+  },
+  "components": ["https://github.com/discourse/discourse-clickable-topic"]
 }

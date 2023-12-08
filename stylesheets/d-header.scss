@@ -1,0 +1,98 @@
+.d-header {
+  height: 5.625rem; // 90px
+  box-shadow: none;
+}
+
+.d-header-icons .icon {
+  color: var(--header_primary);
+  > .d-icon {
+    color: var(--header_primary);
+  }
+  .discourse-no-touch & {
+    &:hover,
+    &:focus {
+      background: transparent;
+      > .d-icon {
+        color: var(--tertiary);
+      }
+    }
+  }
+}
+
+.drop-down-mode .d-header-icons .active .icon {
+  background: transparent;
+  border-color: transparent;
+  > .d-icon {
+    color: var(--tertiary);
+  }
+  &:after {
+    border-color: transparent;
+  }
+}
+
+.user-menu.revamped {
+  border-top-right-radius: var(--d-border-radius-large);
+
+  .tabs-list .btn .badge-notification {
+    background: var(--tertiary);
+  }
+
+  .quick-access-panel li a,
+  .quick-access-panel li .profile-tab-btn {
+    padding: 0.15em 0.25em;
+  }
+
+  .quick-access-panel:not(#quick-access-profile) li {
+    background: var(--primary-very-low);
+
+    .item-label {
+      color: var(--primary-high);
+    }
+    .d-icon {
+      color: var(--primary-low-mid);
+    }
+    a,
+    a:visited {
+      color: var(--primary-medium);
+    }
+
+    &.unread {
+      background: transparent;
+      .d-icon {
+        color: var(--primary-medium);
+      }
+      a,
+      a:visited {
+        color: var(--tertiary);
+      }
+    }
+
+    .discourse-no-touch & {
+      &:hover,
+      &:focus {
+        background: var(--primary-200);
+      }
+    }
+  }
+}
+
+.search-menu .search-link:focus,
+.search-menu .search-link:hover,
+.search-menu-container .search-link:focus,
+.search-menu-container .search-link:hover {
+  background: var(--primary-200);
+}
+
+.search-menu .search-link .topic-title,
+.search-menu-container .search-link .topic-title {
+  color: var(--primary);
+}
+
+.search-container .search-advanced .search-info {
+  background: transparent;
+}
+
+.extra-info-wrapper .topic-link,
+#topic-title h1 {
+  font-weight: 400;
+}
